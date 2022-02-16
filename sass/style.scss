@@ -1,0 +1,761 @@
+@function pxTovw($px) {
+  @return $px * 100 / 1920 + vw;
+}
+
+//type
+$type-bg: 30px;
+
+$leftbar-width: 24%;
+//--------------------
+// $colorYellow: #000000;
+// $colorBlack: #ffff;
+
+//color
+$colorYellow: #ffe100;
+$colorBlack: #000000;
+
+//--------------------
+$border-radius: 5px;
+$font-family-en: "Courier Prime", monospace;
+$font-family-th: "Noto Sans TC", sans-serif;
+
+* {
+  // border: 1px $colorYellow solid;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-th;
+}
+
+html,
+body {
+  font-family: "Courier Prime", monospace;
+  font-family: "Noto Sans TC", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+#NoChilden {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.guides {
+  background-color: $colorBlack;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 0, 0.1),
+      rgba(255, 255, 0, 0),
+      rgba(255, 255, 0, 0.1) 100%
+    );
+  }
+  .grid {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    > .hline {
+      position: absolute;
+      margin: 0;
+      width: 1px;
+      height: 100%;
+      background-color: $colorYellow;
+      opacity: 0.3;
+    }
+    > .h1 {
+      left: 12.5%;
+    }
+    > .h2 {
+      left: 25%;
+    }
+    > .h3 {
+      left: 37.5%;
+    }
+    > .h4 {
+      left: 50%;
+    }
+    > .h5 {
+      left: 62.5%;
+    }
+    > .h6 {
+      left: 75%;
+    }
+    > .h7 {
+      left: 87.5%;
+    }
+
+    > .wline {
+      position: absolute;
+      margin: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $colorYellow;
+      opacity: 0.3;
+    }
+    > .w1 {
+      top: 12.5%;
+    }
+    > .w2 {
+      top: 25%;
+    }
+    > .w3 {
+      top: 37.5%;
+    }
+    > .w4 {
+      top: 50%;
+    }
+    > .w5 {
+      top: 62.5%;
+    }
+    > .w6 {
+      top: 75%;
+    }
+    > .w7 {
+      top: 87.5%;
+    }
+  }
+}
+.Outerframe {
+  position: fixed;
+  top: 2%;
+  left: 1%;
+  width: calc(100% - 2%);
+  height: calc(100% - 6%);
+  border: 2px solid $colorYellow;
+  border-radius: $border-radius;
+  // background-image: url(../img/Vector\ 1.svg);
+  // background-position: 0%;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  z-index: 2;
+  .nav-top {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 2px solid $colorYellow;
+    // background-color: $colorBlack;
+    border-radius: $border-radius $border-radius 0 0;
+    z-index: 9999;
+
+    ul.drop-down-menu {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      > li {
+        position: relative;
+        width: 100px;
+
+        > ul {
+          display: none;
+          width: 100%;
+          padding: 0;
+          position: absolute;
+          z-index: 9999;
+          border: 2px solid $colorYellow;
+          border-bottom: none;
+          > li {
+            top: 0;
+            width: 100%;
+            display: block;
+            background-color: $colorBlack;
+            > a {
+              display: block;
+              width: 100%;
+              text-align: center;
+              color: $colorYellow;
+              line-height: 40px;
+              letter-spacing: 1px;
+              white-space: nowrap;
+              border-bottom: 2px solid $colorYellow;
+              transition: all 0.4s;
+            }
+          }
+        }
+        .box {
+          display: block;
+          width: 100%;
+          text-align: center;
+          color: $colorYellow;
+          line-height: 40px;
+          letter-spacing: 1px;
+          transition: all 0.4s;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            bottom: -5px;
+            border-radius: 2px;
+            right: -5px;
+            background-color: $colorYellow;
+          }
+        }
+      }
+    }
+    ul.drop-down-menu li:hover > a {
+      color: rgba(255, 251, 0, 0.4);
+    }
+    ul.drop-down-menu li:hover > ul {
+      display: block;
+    }
+  }
+}
+
+//Monster-introduce-------------------------------------
+.Monster-introduce {
+  // border: 2px $colorYellow solid;
+  border-radius: $border-radius;
+  // border-top: none;
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 10px;
+  left: 10px;
+  // background-color: $colorBlack;
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: $border-radius;
+    width: $leftbar-width;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid $colorYellow;
+    background-color: $colorYellow;
+    .monster-name {
+      padding-left: 25px;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: pxTovw(30);
+      h1 {
+        font-size: pxTovw(30);
+        margin: 0;
+        padding: 0;
+        vertical-align: bottom;
+      }
+    }
+    .monster-number {
+      background-color: $colorBlack;
+      border: $colorYellow 1px solid;
+      border-radius: $border-radius;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      vertical-align: bottom;
+      h1 {
+        margin: 0;
+        padding-top: 5px;
+        letter-spacing: 5px;
+        font-size: pxTovw(30);
+        font-family: $font-family-en;
+        color: $colorYellow;
+      }
+    }
+  }
+}
+
+//-------------------------------------------
+%itemstyle {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.Monster-introduce {
+  .item {
+    display: none;
+    transition: all 1s;
+  }
+  .item.all.open {
+    width: $leftbar-width;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $colorBlack;
+    color: $colorYellow;
+    border: 2px $colorYellow solid;
+    border-radius: $border-radius;
+    .year {
+      @extend %itemstyle;
+      margin-top: 80px;
+      padding-bottom: 11px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid $colorYellow;
+      letter-spacing: 1px;
+      h1 {
+        font-size: pxTovw(21);
+        font-family: $font-family-th;
+        font-weight: 600;
+      }
+      p {
+        font-size: pxTovw(21);
+      }
+    }
+
+    .identity {
+      @extend %itemstyle;
+      padding-bottom: 11px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid $colorYellow;
+      letter-spacing: 1px;
+      h1 {
+        font-size: pxTovw(21);
+      }
+      p {
+        font-size: pxTovw(21);
+      }
+    }
+    .block-born-kind {
+      @extend %itemstyle;
+      margin-bottom: 50px;
+      .born {
+        position: relative;
+        width: 40%;
+        @extend %itemstyle;
+
+        img {
+          width: 100%;
+          display: block;
+          overflow: hidden;
+        }
+        h1 {
+          font-size: pxTovw(21);
+          width: 30%;
+          letter-spacing: 2px;
+        }
+        p {
+          font-size: pxTovw(18);
+          width: 100%;
+          text-align: center;
+          padding-top: 10px;
+        }
+      }
+
+      .kind {
+        @extend %itemstyle;
+        width: 40%;
+        position: relative;
+        img {
+          width: 100%;
+          overflow: hidden;
+          display: block;
+        }
+        h1 {
+          width: 30%;
+          font-size: pxTovw(21);
+          letter-spacing: 2px;
+        }
+        p {
+          font-size: pxTovw(18);
+          text-align: center;
+          padding-top: 10px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $colorYellow;
+          opacity: 0.3;
+          bottom: -30%;
+          left: -75%;
+        }
+      }
+    }
+    .born::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background-color: $colorYellow;
+      right: -24%;
+    }
+  }
+}
+
+//---------------------------------------------
+.Monster-introduce {
+  position: relative;
+  #Monster-introduce-btn {
+    position: absolute;
+    bottom: -78px;
+    left: 0px;
+    width: 55px;
+    height: 40px;
+    background-color: $colorYellow;
+    border-radius: 0px 0px $border-radius $border-radius;
+    z-index: -1;
+    background-image: url(../img/down.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+
+    transition: all 1s;
+  }
+  #Monster-introduce-btn.hide {
+    display: none;
+    transition: all 1s;
+  }
+  #Monster-introduce-btn-close {
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    width: 55px;
+    height: 40px;
+    border-radius: 0px 0px $border-radius $border-radius;
+    background-position: 50% 85%;
+    background-image: url(../img/up.svg);
+    background-color: $colorYellow;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    transition: all 0s;
+  }
+}
+//------------------Monster-introduce-second-------------------
+.Monster-introduce-second {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 500px;
+  left: 10px;
+  color: $colorYellow;
+
+  .item.bodyheight.open {
+    display: block;
+  }
+  .item.feature.open {
+    display: block;
+  }
+  .item.ability.open {
+    display: block;
+  }
+
+  .item {
+    display: none;
+    width: 24%;
+    position: absolute;
+    top: 80px;
+    background-color: $colorBlack;
+    border: 2px solid $colorYellow;
+    border-radius: $border-radius;
+    padding: 20px;
+    li {
+      width: 100%;
+      font-size: 14px;
+      line-height: 30px;
+      letter-spacing: 1px;
+    }
+  }
+  .nav-btn-group {
+    width: 100%;
+    position: absolute;
+    width: $leftbar-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-btn {
+      width: 30%;
+      height: auto;
+      background-color: rgba(255, 251, 0, 0.4);
+      border: 2px solid $colorYellow;
+      border-radius: $border-radius;
+      transition: all 0.3s;
+      &:hover {
+        background-color: $colorYellow;
+        > a {
+          color: $colorBlack;
+        }
+      }
+      &:focus {
+        background-color: $colorYellow;
+      }
+      a {
+        padding: 0;
+        margin: 0;
+        display: block;
+        width: 100%;
+        color: $colorYellow;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: pxTovw(30);
+        line-height: 50px;
+
+        transform: translateX(12%);
+      }
+    }
+  }
+}
+
+//-------------------Chart------------------------
+
+.Outerframe {
+  .chart {
+    width: 24%;
+    height: auto;
+    position: absolute;
+    // border: 1px solid $colorYellow;
+    bottom: 130px;
+    left: 10px;
+    z-index: -1;
+    ul.chartTittles {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: $colorYellow;
+        left: pxTovw(81);
+      }
+      li {
+        width: 100%;
+        height: auto;
+        display: flex;
+        h1 {
+          width: 20%;
+          margin-right: 10px;
+          color: $colorYellow;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 40px;
+          letter-spacing: 2px;
+          text-align: center;
+        }
+        > ul {
+          margin-top: 12px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          > li {
+            width: 57px;
+            height: 20px;
+            background-color: rgba(255, 225, 0, 0.6);
+            border: 2px solid $colorYellow;
+          }
+        }
+      }
+    }
+  }
+}
+//--------------------logo------------------------
+.Outerframe {
+  * {
+    // border: 1px solid $colorYellow;
+  }
+  .logo {
+    position: absolute;
+    width: 24%;
+    height: auto;
+    bottom: 0;
+    a {
+      padding-left: 10px;
+      display: block;
+      width: 100%;
+    }
+  }
+}
+//-------------------Monster-select---------------------
+.Monster-select {
+  border-radius: $border-radius;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 274px;
+  height: 70%;
+  overflow: hidden;
+  border: 2px solid $colorYellow;
+  background-color: #000000;
+
+  .Monster-select-tittle.top {
+  }
+  .Monster-select-tittle.bottom {
+  }
+  .Monster-select-tittle {
+    width: 100%;
+    height: 5%;
+    background-color: $colorYellow;
+
+    p {
+      display: block;
+      line-height: 35px;
+      color: $colorBlack;
+      font-size: 21px;
+      text-align: center;
+      font-family: $font-family-en;
+      font-style: italic;
+      font-weight: 800;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $colorBlack;
+        width: 15px;
+        height: 15px;
+        top: 10px;
+        left: 15px;
+        border-radius: 5px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $colorBlack;
+        width: 15px;
+        height: 15px;
+        top: 10px;
+        right: 15px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .box-shadow {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    &::after {
+      content: "";
+      top: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.8) 100%
+      );
+    }
+    > ul.Monsters {
+      display: block;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      overflow: scroll;
+      position: relative;
+      padding: 10px;
+
+      li.Monster-btn {
+        width: 45%;
+        height: 30%;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-image: url(../img/MonsterEdu01.png);
+          background-position: 50% 50%;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.Monster-select ul.Monsters {
+  -ms-overflow-style: none;
+  // height: 100%;
+  // width: calc(100vw + 18px);
+  overflow: auto;
+}
+.Monster-select ul.Monsters::-webkit-scrollbar {
+  display: none;
+}
+
+//bottom-type
+.Outerframe {
+  .bottom-type {
+    width: auto;
+    height: auto;
+    position: absolute;
+    // border: 1px solid $colorYellow;
+    bottom: 20px;
+    right: 0;
+    padding: 10px;
+    p {
+      font-weight: 300;
+      font-size: 16px;
+      text-align: right;
+      color: $colorYellow;
+      line-height: 30px;
+      letter-spacing: 1px;
+    }
+    h1 {
+      text-align: right;
+      color: $colorYellow;
+      letter-spacing: 1px;
+    }
+  }
+
+  .Copyright {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    // background-color: #ffe100;
+    bottom: -35px;
+    right: 10px;
+    > p {
+      text-align: right;
+      color: $colorYellow;
+      letter-spacing: 2px;
+      font-size: 18px;
+      font-weight: 200;
+    }
+  }
+}
+//-----------------------Monster-img-block-----------------
+.Monster-img-block {
+  * {
+    // border: $colorYellow 1px solid;
+  }
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  padding-top: 50px;
+  .monster-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    img {
+      width: 40%;
+      height: 40%;
+    }
+  }
+}
