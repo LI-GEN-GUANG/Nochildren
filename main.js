@@ -1,8 +1,5 @@
-import "@/style/style.scss";
 
-
-$(function(){
-
+$(document).ready(function(){
 
     $("#Monster-introduce-btn").on("click",function(){
     

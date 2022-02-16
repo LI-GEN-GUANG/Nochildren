@@ -16,6 +16,7 @@ $colorBlack: #000000;
 
 //--------------------
 $border-radius: 5px;
+$border-bold: 2px solid $colorYellow;
 $font-family-en: "Courier Prime", monospace;
 $font-family-th: "Noto Sans TC", sans-serif;
 
@@ -133,7 +134,7 @@ body {
   left: 1%;
   width: calc(100% - 2%);
   height: calc(100% - 6%);
-  border: 2px solid $colorYellow;
+  border: $border-bold;
   border-radius: $border-radius;
   // background-image: url(../img/Vector\ 1.svg);
   // background-position: 0%;
@@ -144,7 +145,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    border-bottom: 2px solid $colorYellow;
+    border-bottom: $border-bold;
     // background-color: $colorBlack;
     border-radius: $border-radius $border-radius 0 0;
     z-index: 9999;
