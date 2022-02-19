@@ -27,7 +27,9 @@ $font-family-th: "Noto Sans TC", sans-serif;
   padding: 0;
   font-family: $font-family-th;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   font-family: "Courier Prime", monospace;
