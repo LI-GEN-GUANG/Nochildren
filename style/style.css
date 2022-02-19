@@ -3,7 +3,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Noto Sans TC", sans-serif, "Courier Prime", monospace;
 }
 
 html {
@@ -133,7 +133,7 @@ body {
   width: calc(100% - 2%);
   height: calc(100% - 6%);
   border: 2px solid #ffe100;
-  border-radius: 5px;
+  border-radius: 10px;
   z-index: 2;
 }
 
@@ -146,7 +146,7 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   border-bottom: 2px solid #ffe100;
-  border-radius: 5px 5px 0 0;
+  border-radius: 10px 10px 0 0;
   z-index: 9999;
 }
 
@@ -226,7 +226,7 @@ body {
 }
 
 .Monster-introduce {
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
   width: 100%;
   height: auto;
@@ -238,7 +238,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 24%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -274,7 +274,7 @@ body {
 .Monster-introduce .title .monster-number {
   background-color: #000000;
   border: #ffe100 1px solid;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,7 +338,7 @@ body {
   background-color: #000000;
   color: #ffe100;
   border: 2px #ffe100 solid;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .Monster-introduce .item.all.open .year {
@@ -456,7 +456,7 @@ body {
   width: 55px;
   height: 40px;
   background-color: #ffe100;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 10px 10px;
   z-index: -1;
   background-image: url(../img/down.svg);
   background-repeat: no-repeat;
@@ -477,7 +477,7 @@ body {
   bottom: -30px;
   width: 55px;
   height: 40px;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 10px 10px;
   background-position: 50% 85%;
   background-image: url(../img/up.svg);
   background-color: #ffe100;
@@ -500,10 +500,6 @@ body {
   display: block;
 }
 
-.Monster-introduce-second .item.feature.open {
-  display: block;
-}
-
 .Monster-introduce-second .item.ability.open {
   display: block;
 }
@@ -515,7 +511,7 @@ body {
   top: 80px;
   background-color: #000000;
   border: 2px solid #ffe100;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 20px;
 }
 
@@ -542,11 +538,11 @@ body {
 }
 
 .Monster-introduce-second .nav-btn-group .nav-btn {
-  width: 30%;
+  width: 49%;
   height: auto;
   background-color: rgba(255, 251, 0, 0.4);
   border: 2px solid #ffe100;
-  border-radius: 5px;
+  border-radius: 10px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -573,8 +569,8 @@ body {
   text-align: center;
   letter-spacing: 1.5625vw;
   line-height: 50px;
-  -webkit-transform: translateX(12%);
-          transform: translateX(12%);
+  -webkit-transform: translateX(8%);
+          transform: translateX(8%);
 }
 
 .Outerframe .chart {
@@ -652,7 +648,7 @@ body {
 }
 
 .Monster-select {
-  border-radius: 5px;
+  border-radius: 10px;
   position: absolute;
   top: 60px;
   right: 20px;
@@ -828,6 +824,7 @@ body {
 }
 
 .Monster-img-block .monster-img {
+  position: relative;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -847,6 +844,30 @@ body {
       align-content: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+}
+
+.Monster-img-block .monster-img h1 {
+  display: block;
+  height: auto;
+  width: 13%;
+  font-size: 10.41667vw;
+  position: absolute;
+  top: 10%;
+  right: 24%;
+  color: #ffe100;
+  word-break: break-all;
+  line-height: 10.41667vw;
+  letter-spacing: 50px;
+  font-weight: 800;
+  z-index: -1;
+  opacity: 0.3;
+  -webkit-transform: skew(50rad);
+          transform: skew(50rad);
+}
+
+.Monster-img-block .monster-img .number {
+  top: 20%;
+  right: 16%;
 }
 
 .Monster-img-block .monster-img img {

@@ -122,14 +122,14 @@
           <li class="content"></li>
         </ul>
 
-        <ul class="item feature">
+        <!-- <ul class="item feature">
           <li class="content">● 爆炸頭：頭髮跟內心一樣爆炸、焦躁不安</li>
           <li class="content">● 紅筆角：從腦袋長出來，用來時時刻刻評斷小孩</li>
           <li class="content">● 嚴酷臉：想表現兇惡與權威，卻看起來可笑、愚鈍</li>
           <li class="content">● 揉爛考卷：牠身上唯一的衣物，上面的分數決定牠的尊嚴大小</li>
           <li class="content">● 打小孩用具：體罰是把小孩修好的唯一方法</li>
           <li class="content">● 鷹爪：用來狹持、逼迫小孩朝自己預想方向前進</li>
-        </ul>
+        </ul> -->
 
         <ul class="item ability">
           <li class="content">● 把小孩課業成績與自己的尊嚴緊密掛鉤</li>
@@ -139,7 +139,7 @@
 
         <div class="nav-btn-group">
           <div class="nav-btn Bodyheight"><a href="javascript:;">身長</a></div>
-          <div class="nav-btn Feature"><a href="javascript:;">特徵</a></div>
+          <!-- <div class="nav-btn Feature"><a href="javascript:;">特徵</a></div> -->
           <div class="nav-btn Ability"><a href="javascript:;">能力</a></div>
         </div>
 
@@ -265,7 +265,9 @@
       <!--Monster-img-block-->
     </div>
     <div class="Monster-img-block">
-      <div id="EDU-01" class="monster-img"><img src="./img/Monster1.png" alt=""></div>
+      <div id="EDU-01" class="monster-img">
+        <h1>EDU</h1><h1 class="number">001</h1>
+        <img src="./img/Monster1.png" alt=""></div>
       <div id="HOM-01" class="monster-img"><img src="./img/Monster2.png" alt=""></div>
       <div id="HOM-02" class="monster-img"><img src="./img/Monster3.png" alt=""></div>
       <div id="HOM-03" class="monster-img"><img src="./img/Monster4.png" alt=""></div>
@@ -295,19 +297,19 @@ $("#Monster-introduce-btn").on("click",function(){
     if($(".item.bodyheight").hasClass("open")){
 
     $(".item.bodyheight").removeClass("open");
-    $(".item.feature").removeClass("open");
+    // $(".item.feature").removeClass("open");
     $(".item.ability").removeClass("open");
 
     }else if($(".item.feature").hasClass("open")){
   
     $(".item.bodyheight").removeClass("open");
-    $(".item.feature").removeClass("open");
+    // $(".item.feature").removeClass("open");
     $(".item.ability").removeClass("open");
 
     }else if($(".item.ability").hasClass("open")){
   
     $(".item.bodyheight").removeClass("open");
-    $(".item.feature").removeClass("open");
+    // $(".item.feature").removeClass("open");
     $(".item.ability").removeClass("open");
 
     }
@@ -354,13 +356,13 @@ $("#Monster-introduce-btn-close").on("click",function(){
 
     }else if($(".item.feature").hasClass("open")){
       
-    $(".item.feature").removeClass("open");
+    // $(".item.feature").removeClass("open");
     $(".item.ability").removeClass("open");
     $(".item.bodyheight").addClass("open");
 
     }else if($(".item.ability").hasClass("open")){
       
-    $(".item.feature").removeClass("open");
+    // $(".item.feature").removeClass("open");
     $(".item.ability").removeClass("open");
     $(".item.bodyheight").addClass("open");
     
@@ -383,7 +385,7 @@ $("#Monster-introduce-btn-close").on("click",function(){
       }else if($(".item.feature").hasClass("open")){
         
 
-      $(".item.feature").removeClass("open");
+      // $(".item.feature").removeClass("open");
   
       
       }else if($(".item.ability").hasClass("open")){
@@ -403,13 +405,13 @@ $("#Monster-introduce-btn-close").on("click",function(){
       if($(".item.bodyheight").hasClass("open")){
 
       $(".item.bodyheight").removeClass("open");
-      $(".item.feature").removeClass("open");
+      // $(".item.feature").removeClass("open");
       $(".item.ability").addClass("open");
 
       }else if($(".item.feature").hasClass("open")){
         
       $(".item.bodyheight").removeClass("open");
-      $(".item.feature").removeClass("open");
+      // $(".item.feature").removeClass("open");
       $(".item.ability").addClass("open");
 
       }else if($(".item.ability").hasClass("open")){
