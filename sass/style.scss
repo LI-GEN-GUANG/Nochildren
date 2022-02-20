@@ -21,6 +21,7 @@ $font-family-en: "Courier Prime", monospace;
 $font-family-th: "Noto Sans TC", sans-serif;
 
 * {
+  cursor: crosshair;
   // border: 1px $colorYellow solid;
   box-sizing: border-box;
   margin: 0;
@@ -678,6 +679,76 @@ body {
           background-repeat: no-repeat;
         }
       }
+      li.Monster-btn.HOM-01 {
+        a {
+          background-image: url(../img/btn/2.png);
+        }
+      }
+      li.Monster-btn.HOM-02 {
+        a {
+          background-image: url(../img/btn/3.png);
+        }
+      }
+      li.Monster-btn.HOM-03 {
+        a {
+          background-image: url(../img/btn/4.png);
+        }
+      }
+      li.Monster-btn.HOM-04 {
+        a {
+          background-image: url(../img/btn/5.png);
+        }
+      }
+      li.Monster-btn.JOB-01 {
+        a {
+          background-image: url(../img/btn/6.png);
+        }
+      }
+      li.Monster-btn.JOB-02 {
+        a {
+          background-image: url(../img/btn/7.png);
+        }
+      }
+      li.Monster-btn.SOC-01 {
+        a {
+          background-image: url(../img/btn/8.png);
+        }
+      }
+      li.Monster-btn.SOC-02 {
+        a {
+          background-image: url(../img/btn/9.png);
+        }
+      }
+      li.Monster-btn.SOC-03 {
+        a {
+          background-image: url(../img/btn/10.png);
+        }
+      }
+      li.Monster-btn.SOC-04 {
+        a {
+          background-image: url(../img/btn/11.png);
+        }
+      }
+      li.Monster-btn.GOV-01 {
+        a {
+          background-image: url(../img/btn/12.png);
+        }
+      }
+      li.Monster-btn.GOV-02 {
+        a {
+          background-image: url(../img/btn/13.png);
+        }
+      }
+      li.Monster-btn.GOV-03 {
+        a {
+          background-image: url(../img/btn/14.png);
+        }
+      }
+      li.Monster-btn.xxx {
+        a {
+          background-image: url(../img/btn/xxx.png);
+        }
+      }
     }
   }
 }
@@ -733,6 +804,7 @@ body {
     }
   }
 }
+
 //-----------------------Monster-img-block-----------------
 .Monster-img-block {
   * {
@@ -749,7 +821,8 @@ body {
   padding-top: 50px;
 
   .monster-img {
-    margin-bottom: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     position: relative;
     width: 100%;
     height: 100%;
@@ -785,5 +858,22 @@ body {
       width: 40%;
       height: 40%;
     }
+  }
+}
+
+//------------------------Monster-page-------------------------------------
+.monster-page {
+  width: 90%;
+  height: 90%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: $colorBlack;
+  border: 1px solid $colorYellow;
+  z-index: 9999;
+  border-radius: $border-radius;
+  h1 {
+    color: $colorYellow;
   }
 }
