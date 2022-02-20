@@ -51,7 +51,7 @@
           <li><a class="box" href="javascript:;">怪物起源</a>
             <ul>
             <li><a id="Lesschildren-open" href="javascript:;">少子化</a></li>
-            <li><a href="javascript:;">波及人物</a></li>
+            <li><a id="Spread-open" href="javascript:;">波及人物</a></li>
           </ul>
         </li>
           <li><a class="box" href="javascript:;">怎麼辦?</a>
@@ -156,12 +156,12 @@
           <li class="chartTittle">
             <h1>社交</h1>
             <ul class="boxes">
-              <li class="box"></li>
-              <li class="box"></li>
-              <li class="box"></li>
-              <li class="box"></li>
-              <li class="box"></li>
-              <li class="box"></li>
+              <li class="box open close"></li>
+              <li class="box open close"></li>
+              <li class="box open close"></li>
+              <li class="box open close"></li>
+              <li class="box open close"></li>
+              <li class="box open close"></li>
             </ul>
           </li>
 
@@ -320,8 +320,8 @@
 
 
     <!--Monster-page-->
-    <div class="page-background">
-      <div id="Lesschildren" class="monster-page">
+    <div id="Lesschildren" class="page-background">
+      <div class="monster-page">
         <h1>#臺灣少子化</h1>
         <div class="textContent">
         <img src="https://picsum.photos/id/401/600/400" alt="">
@@ -334,10 +334,52 @@
           </p>            
         </div>
       </div>
-      <a id="Lesschildren-x-btn" href="javascript:;"></a>
-    </div>    
-      <!-- <div class="monster-page-How"></div>
-      <div class="monster-page-About"></div> -->
+      <a id="Lesschildren-x-btn" class="page-btn" href="javascript:;"></a>
+    </div>
+    
+    
+    <div id="Spread" class="page-background">
+      <div class="monster-page">
+        <h1>#波及人物</h1>
+        <div class="textContent">
+        <img src="https://picsum.photos/id/500/600/400" alt="">
+          <p># 受害者／加害者
+            ***各1**
+            - 男性（此指生理男＆心理男）<br>
+            －男性做為受害者，更容易被強加社會責任，金錢與能力會被放大檢視，若是不達社會或自己心中的期待的情況下，要結婚生子就會更有困難。<br>
+            －男性作為加害者，思想較容易被大男人及傳統觀念等主義束縛，對異性的不尊重，或是過度自我感覺良好等都會加劇成家的難度。<br>
+          </p>
+          <img src="https://picsum.photos/id/123/600/400" alt="">
+          <p>
+            - 女性（此指生理女＆心理女）<br>
+            －女性做為受害者，不論在職場或家庭上較容易受到歧視，其中包括同工不同酬、女應主內、該帶小孩等，不平衡的心理也容易造成生養意願降低<br>
+            －女性做為加害者，較容易放大檢視異性的財力、能力狀況，若是對方的能力不達自己的期待，更有可能乾脆不婚不嫁。<br>
+          </p>
+          <img src="https://picsum.photos/id/555/600/400" alt="">
+          <p>
+            - 年輕人<br>
+            －年輕人做為受害者，因少子化而造成的撫養比上升、經濟能力衰退、高房價及社會期待等等，貧富差距的擴大，以及鼓吹先立業後成家的觀念，種種壓力讓婚嫁生子的門檻更高，使得少子化更為加劇。
+            - 陳舊觀念的人<br>
+          </p>
+          <img src="https://picsum.photos/id/90/600/400" alt="">
+          <p>
+            －做為加害者，會把自己的觀念強加在他人身上，在婚姻中輕則造成他人不適，重則使人對婚姻關係更有疑慮，生子的意願也將更低。
+            - 國家<br>
+            －國家做為受害者，勞動人口的下降會使經濟發展衰退，面對瞬息萬變的全球化時代將更沒有應對的能力。<br>
+            －國家做為加害者，不夠精確的社會調查會使數據沒有公信力，以及不完整的育兒配套措施也使人民對育兒這件事更有疑慮。
+          </p>
+          <img src="https://picsum.photos/id/126/600/400" alt="">
+          <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
+            隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
+          </p>            
+        </div>
+      </div>
+      <a id="Spread-x-btn" class="page-btn" href="javascript:;"></a>
+    </div>
+
+
+
+    <div class="monster-page-About"></div>
 
 
 
@@ -421,13 +463,13 @@ $("#Monster-introduce-btn-close").on("click",function(){
 
     }else if($(".item.feature").hasClass("open")){
       
-    // $(".item.feature").removeClass("open");
+
     $(".item.ability").removeClass("open");
     $(".item.bodyheight").addClass("open");
 
     }else if($(".item.ability").hasClass("open")){
       
-    // $(".item.feature").removeClass("open");
+ 
     $(".item.ability").removeClass("open");
     $(".item.bodyheight").addClass("open");
     
@@ -446,13 +488,11 @@ $("#Monster-introduce-btn-close").on("click",function(){
       if($(".item.bodyheight").hasClass("open")){
 
       $(".item.bodyheight").removeClass("open");
-      // $(".item.feature").removeClass("open");
       $(".item.ability").addClass("open");
 
       }else if($(".item.feature").hasClass("open")){
         
       $(".item.bodyheight").removeClass("open");
-      // $(".item.feature").removeClass("open");
       $(".item.ability").addClass("open");
 
       }else if($(".item.ability").hasClass("open")){
@@ -470,15 +510,26 @@ $("#Monster-introduce-btn-close").on("click",function(){
 
 $("#Lesschildren-open").on("click",function(){
       
-      $(".page-background").fadeIn("");
+      $("#Lesschildren").fadeIn("");
     })
-
-
 
 $("#Lesschildren-x-btn").on("click",function(){
       
-    $(".page-background").fadeOut("");
+    $("#Lesschildren").fadeOut("");
    })
+
+
+
+   $("#Spread-open").on("click",function(){
+      
+      $("#Spread").fadeIn("");
+    })
+
+$("#Spread-x-btn").on("click",function(){
+      
+    $("#Spread").fadeOut("");
+   })
+
 })
 
   </script>

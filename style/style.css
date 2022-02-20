@@ -954,7 +954,7 @@ body {
   display: none;
 }
 
-.page-background a {
+.page-background a.page-btn {
   display: block;
   position: fixed;
   width: 21px;
