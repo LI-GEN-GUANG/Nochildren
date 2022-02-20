@@ -862,18 +862,80 @@ body {
 }
 
 //------------------------Monster-page-------------------------------------
-.monster-page {
-  width: 90%;
-  height: 90%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  background-color: $colorBlack;
-  border: 1px solid $colorYellow;
+.page-background {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 9999;
-  border-radius: $border-radius;
-  h1 {
-    color: $colorYellow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  a {
+    display: block;
+    position: fixed;
+    width: 21px;
+    height: 25px;
+    top: pxTovw(80);
+    right: pxTovw(350);
+    background-image: url(../img/icon/xxx.svg);
+    background-position: 50% 50%;
+    background-size: 21px 25px;
+    padding: 20px;
+    background-repeat: no-repeat;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
   }
+  .monster-page {
+    * {
+      // border: 1px solid $colorYellow;
+    }
+
+    width: pxTovw(1234);
+    height: pxTovw(869);
+    position: relative;
+    top: 51%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: $colorBlack;
+    border: 2px solid $colorYellow;
+    z-index: 9999;
+    border-radius: $border-radius;
+    overflow: scroll;
+    h1 {
+      padding-left: 5%;
+      font-size: pxTovw(72);
+      color: $colorYellow;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+
+    .textContent {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 50%;
+        margin-top: 10px;
+      }
+      p {
+        margin-top: 20px;
+        height: auto;
+        width: 80%;
+        color: $colorYellow;
+        letter-spacing: 1px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+.monster-page {
+  -ms-overflow-style: none;
+}
+.monster-page::-webkit-scrollbar {
+  display: none;
 }
