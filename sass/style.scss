@@ -519,7 +519,7 @@ body {
     height: auto;
     position: absolute;
     // border: 1px solid $colorYellow;
-    bottom: 130px;
+    bottom: pxTovw(130);
     left: 10px;
     z-index: -1;
     ul.chartTittles {
@@ -876,7 +876,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  // display: none;
+  display: none;
   a {
     display: block;
     position: fixed;

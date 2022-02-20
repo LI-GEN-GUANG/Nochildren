@@ -50,7 +50,7 @@
         </li>
           <li><a class="box" href="javascript:;">怪物起源</a>
             <ul>
-            <li><a href="javascript:;">少子化</a></li>
+            <li><a id="Lesschildren-open" href="javascript:;">少子化</a></li>
             <li><a href="javascript:;">波及人物</a></li>
           </ul>
         </li>
@@ -327,10 +327,14 @@
         <img src="https://picsum.photos/id/401/600/400" alt="">
           <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
             隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
-            </p>
+          </p>
+          <img src="https://picsum.photos/id/111/600/400" alt="">
+          <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
+            隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
+          </p>            
         </div>
       </div>
-      <a id="x-btn" href="javascript:;"></a>
+      <a id="Lesschildren-x-btn" href="javascript:;"></a>
     </div>    
       <!-- <div class="monster-page-How"></div>
       <div class="monster-page-About"></div> -->
@@ -389,16 +393,16 @@ $("#Monster-introduce-btn-close").on("click",function(){
     $(".nav-btn-group").animate({"top":-270},100)
 
     $(".item.bodyheight").animate({"top":-200},0)
-    $(".item.feature").animate({"top":-200},0)
+    // $(".item.feature").animate({"top":-200},0)
     $(".item.ability").animate({"top":-200},0)
     $(".item.all.open").removeClass("open")
     $("#Monster-introduce-btn.hide").removeClass("hide")
 
     if($(".item.bodyheight").hasClass("open")){
     }
-    else if
-    ($(".item.feature").hasClass("open")){
-    }
+    // else if
+    // ($(".item.feature").hasClass("open")){
+    // }
     else if
     ($(".item.ability").hasClass("open")){
     }
@@ -435,31 +439,7 @@ $("#Monster-introduce-btn-close").on("click",function(){
 
     })
 
-    $(".nav-btn.Feature").on("click",function(){
-
-      if($(".item.bodyheight").hasClass("open")){
-
-      $(".item.bodyheight").removeClass("open");
-      $(".item.ability").removeClass("open");
-      $(".item.feature").addClass("open");
-
-      }else if($(".item.feature").hasClass("open")){
-        
-
-      // $(".item.feature").removeClass("open");
   
-      
-      }else if($(".item.ability").hasClass("open")){
-        
-      $(".item.bodyheight").removeClass("open");
-      $(".item.feature").addClass("open");
-      $(".item.ability").removeClass("open");
-      
-      }else{
-
-        $(".item.feature").addClass("open");
-        }    
-    })
 
     $(".nav-btn.Ability").on("click",function(){
       
@@ -485,7 +465,22 @@ $("#Monster-introduce-btn-close").on("click",function(){
       }    
     })
 
+//----------------------pages-------------------
+
+
+$("#Lesschildren-open").on("click",function(){
+      
+      $(".page-background").fadeIn("");
+    })
+
+
+
+$("#Lesschildren-x-btn").on("click",function(){
+      
+    $(".page-background").fadeOut("");
+   })
 })
+
   </script>
 </body>
 </html>	

@@ -579,7 +579,7 @@ body {
   width: 24%;
   height: auto;
   position: absolute;
-  bottom: 130px;
+  bottom: 6.77083vw;
   left: 10px;
   z-index: -1;
 }
@@ -951,6 +951,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  display: none;
 }
 
 .page-background a {
