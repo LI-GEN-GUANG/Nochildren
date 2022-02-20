@@ -454,14 +454,15 @@ body {
   position: absolute;
   bottom: -78px;
   left: 0px;
-  width: 55px;
-  height: 40px;
+  width: 2.86458vw;
+  height: 2.08333vw;
   background-color: #ffe100;
   border-radius: 0px 0px 10px 10px;
   z-index: -1;
   background-image: url(../img/down.svg);
   background-repeat: no-repeat;
   background-position: 50% 60%;
+  background-size: 1.5625vw 1.04167vw;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -513,12 +514,12 @@ body {
   background-color: #000000;
   border: 2px solid #ffe100;
   border-radius: 10px;
-  padding: 20px;
+  padding: 1.04167vw;
 }
 
 .Monster-introduce-second .item li {
   width: 100%;
-  font-size: 14px;
+  font-size: 0.72917vw;
   line-height: 30px;
   letter-spacing: 1px;
 }
@@ -566,10 +567,10 @@ body {
   display: block;
   width: 100%;
   color: #ffe100;
-  font-size: 24px;
+  font-size: 1.25vw;
   text-align: center;
   letter-spacing: 1.5625vw;
-  line-height: 50px;
+  line-height: 2.60417vw;
   -webkit-transform: translateX(8%);
           transform: translateX(8%);
 }
@@ -608,13 +609,15 @@ body {
 
 .Outerframe .chart ul.chartTittles li h1 {
   width: 20%;
-  margin-right: 10px;
+  margin-right: 0.52083vw;
   color: #ffe100;
-  font-size: 18px;
+  font-size: 0.9375vw;
   font-weight: 400;
   line-height: 40px;
   letter-spacing: 2px;
   text-align: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .Outerframe .chart ul.chartTittles li > ul {
@@ -629,8 +632,8 @@ body {
 }
 
 .Outerframe .chart ul.chartTittles li > ul > li {
-  width: 57px;
-  height: 20px;
+  width: 2.96875vw;
+  height: 1.04167vw;
   background-color: rgba(255, 225, 0, 0.6);
   border: 2px solid #ffe100;
 }
@@ -646,6 +649,11 @@ body {
   padding-left: 10px;
   display: block;
   width: 100%;
+}
+
+.Outerframe .logo a img {
+  width: 100%;
+  height: auto;
 }
 
 .Monster-select {
@@ -828,14 +836,15 @@ body {
 
 .Outerframe .bottom-type p {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 0.83333vw;
   text-align: right;
   color: #ffe100;
-  line-height: 30px;
+  line-height: 1.5625vw;
   letter-spacing: 1px;
 }
 
 .Outerframe .bottom-type h1 {
+  font-size: 1.875vw;
   text-align: right;
   color: #ffe100;
   letter-spacing: 1px;
@@ -852,8 +861,8 @@ body {
 .Outerframe .Copyright > p {
   text-align: right;
   color: #ffe100;
-  letter-spacing: 2px;
-  font-size: 18px;
+  letter-spacing: 0.10417vw;
+  font-size: 0.9375vw;
   font-weight: 200;
 }
 
@@ -949,7 +958,7 @@ body {
   position: fixed;
   width: 21px;
   height: 25px;
-  top: 4.16667vw;
+  top: 3.90625vw;
   right: 18.22917vw;
   background-image: url(../img/icon/xxx.svg);
   background-position: 50% 50%;
@@ -958,6 +967,7 @@ body {
   background-repeat: no-repeat;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
 }
 
 .page-background .monster-page {

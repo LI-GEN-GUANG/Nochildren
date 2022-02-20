@@ -405,15 +405,15 @@ body {
     position: absolute;
     bottom: -78px;
     left: 0px;
-    width: 55px;
-    height: 40px;
+    width: pxTovw(55);
+    height: pxTovw(40);
     background-color: $colorYellow;
     border-radius: 0px 0px $border-radius $border-radius;
     z-index: -1;
     background-image: url(../img/down.svg);
     background-repeat: no-repeat;
     background-position: 50% 60%;
-
+    background-size: pxTovw(30) pxTovw(20);
     transition: all 1s;
   }
   #Monster-introduce-btn.hide {
@@ -463,10 +463,10 @@ body {
     background-color: $colorBlack;
     border: 2px solid $colorYellow;
     border-radius: $border-radius;
-    padding: 20px;
+    padding: pxTovw(20);
     li {
       width: 100%;
-      font-size: 14px;
+      font-size: pxTovw(14);
       line-height: 30px;
       letter-spacing: 1px;
     }
@@ -500,10 +500,10 @@ body {
         display: block;
         width: 100%;
         color: $colorYellow;
-        font-size: 24px;
+        font-size: pxTovw(24);
         text-align: center;
         letter-spacing: pxTovw(30);
-        line-height: 50px;
+        line-height: pxTovw(50);
 
         transform: translateX(8%);
       }
@@ -540,13 +540,14 @@ body {
         display: flex;
         h1 {
           width: 20%;
-          margin-right: 10px;
+          margin-right: pxTovw(10);
           color: $colorYellow;
-          font-size: 18px;
+          font-size: pxTovw(18);
           font-weight: 400;
           line-height: 40px;
           letter-spacing: 2px;
           text-align: center;
+          flex-wrap: nowrap;
         }
         > ul {
           margin-top: 12px;
@@ -554,8 +555,8 @@ body {
           display: flex;
           justify-content: space-between;
           > li {
-            width: 57px;
-            height: 20px;
+            width: pxTovw(57);
+            height: pxTovw(20);
             background-color: rgba(255, 225, 0, 0.6);
             border: 2px solid $colorYellow;
           }
@@ -578,6 +579,10 @@ body {
       padding-left: 10px;
       display: block;
       width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
@@ -775,13 +780,14 @@ body {
     padding: 10px;
     p {
       font-weight: 300;
-      font-size: 16px;
+      font-size: pxTovw(16);
       text-align: right;
       color: $colorYellow;
-      line-height: 30px;
+      line-height: pxTovw(30);
       letter-spacing: 1px;
     }
     h1 {
+      font-size: pxTovw(36);
       text-align: right;
       color: $colorYellow;
       letter-spacing: 1px;
@@ -798,8 +804,8 @@ body {
     > p {
       text-align: right;
       color: $colorYellow;
-      letter-spacing: 2px;
-      font-size: 18px;
+      letter-spacing: pxTovw(2);
+      font-size: pxTovw(18);
       font-weight: 200;
     }
   }
@@ -870,12 +876,13 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  // display: none;
   a {
     display: block;
     position: fixed;
     width: 21px;
     height: 25px;
-    top: pxTovw(80);
+    top: pxTovw(75);
     right: pxTovw(350);
     background-image: url(../img/icon/xxx.svg);
     background-position: 50% 50%;
@@ -884,6 +891,7 @@ body {
     background-repeat: no-repeat;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
   }
   .monster-page {
     * {
