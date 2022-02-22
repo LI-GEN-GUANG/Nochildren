@@ -268,10 +268,19 @@
       <!--bottom-type-end-->
       <!--Monster-img-block-->
     </div>
-    <div class="Monster-img-block">
+    <div id="Monster-img" class="Monster-img-block">
       <div id="EDU-01" class="monster-img">
         <h1>EDU</h1><h1 class="number">001</h1>
-        <img src="./img/EDU-01.png" alt=""></div>
+        <img src="./img/EDU-01.png" alt="">
+        <!--logo-Signs-->
+        <div id="EDU-01-seal-and-signs" class="logo-Signs">
+          <a href="javascript:;" id="EDU-01-seal" class="seal"></a>  
+            <div id="EDU-01-signs" class="signs">
+                <img class="seal-sign-type1" src="./img/seal-type1.svg" alt="">
+                <img class="seal-sign-type2" src="./img/seal-type2.svg" alt="">
+            </div>
+        </div>
+      </div>
       <div id="HOM-01" class="monster-img">
         <h1>HOM</h1><h1 class="number">001</h1>
         <img src="./img/HOM-01.png" alt=""></div>
@@ -316,6 +325,7 @@
         <img src="./img/SOC-01.png" alt=""></div>
     </div>
     
+    <!--logo-Sign-->
 
 
 
@@ -530,6 +540,15 @@ $("#Spread-x-btn").on("click",function(){
     $("#Spread").fadeOut("");
    })
 
+
+
+
+   $("#EDU-01-seal").hover(function(){
+            $("#EDU-01-signs").fadeIn("")}
+
+            ,function(){
+              $("#EDU-01-signs").fadeOut("")
+            })
 })
 
   </script>

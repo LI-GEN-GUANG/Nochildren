@@ -887,6 +887,7 @@ body {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   padding-top: 50px;
+  position: relative;
 }
 
 .Monster-img-block .monster-img {
@@ -894,7 +895,7 @@ body {
   padding-bottom: 40px;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -941,6 +942,65 @@ body {
 .Monster-img-block .monster-img img {
   width: 40%;
   height: 40%;
+}
+
+.monster-img .logo-Signs {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.monster-img .logo-Signs .seal {
+  position: absolute;
+  width: 2.5%;
+  height: 3.5%;
+  top: 43%;
+  left: 38%;
+  display: block;
+  background-image: url(../img/seal.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  pointer-events: all;
+}
+
+.monster-img .logo-Signs .signs {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.monster-img .logo-Signs .signs img {
+  position: absolute;
+  height: auto;
+}
+
+.monster-img .logo-Signs .signs .seal-sign-type1 {
+  top: 19%;
+  right: 30%;
+  width: 13%;
+}
+
+.monster-img .logo-Signs .signs .seal-sign-type2 {
+  bottom: 28%;
+  left: 28%;
+  width: 18%;
+}
+
+.monster-img .seal {
+  -webkit-animation: sway 1s;
+          animation: sway 1s;
+  -moz-animation-duration: 3s;
+  -moz-animation-name: slidein;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+}
+
+#EDU-01-signs {
+  display: none;
 }
 
 .page-background {
