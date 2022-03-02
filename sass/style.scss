@@ -219,21 +219,17 @@ body {
 
 //Monster-introduce-------------------------------------
 .Monster-introduce {
-  // border: 2px $colorYellow solid;
-  border-radius: $border-radius;
-  // border-top: none;
   position: relative;
-  width: 100%;
+  width: $leftbar-width;
   height: auto;
   top: 10px;
   left: 10px;
-  // background-color: $colorBlack;
+  display: flex;
+  flex-wrap: wrap;
+  // border: #ffe100 solid 2px;
   .title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: $border-radius;
-    width: $leftbar-width;
+    border-radius: $border-radius $border-radius $border-radius 0;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     border: 1px solid $colorYellow;
@@ -283,26 +279,39 @@ body {
 }
 
 .Monster-introduce {
+  display: flex;
+  flex-wrap: wrap;
   .item {
     display: none;
-    transition: all 1s;
+  }
+  #Monster-introduce-btn {
+    display: block;
+    width: pxTovw(55);
+    height: pxTovw(35);
+    background-color: $colorYellow;
+    border-radius: 0px 0px $border-radius $border-radius;
+    background-image: url(../img/down.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+    background-size: pxTovw(30) pxTovw(20);
+    z-index: 9999;
   }
   .item.all.open {
     width: $leftbar-width;
+    width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
     background-color: $colorBlack;
     color: $colorYellow;
     border: 2px $colorYellow solid;
     border-radius: $border-radius;
     .year {
       @extend %itemstyle;
-      margin-top: 80px;
+      margin-top: 30px;
       padding-bottom: 11px;
       margin-bottom: 30px;
       border-bottom: 2px solid $colorYellow;
@@ -400,22 +409,6 @@ body {
 
 //---------------------------------------------
 .Monster-introduce {
-  position: relative;
-  #Monster-introduce-btn {
-    position: absolute;
-    bottom: -78px;
-    left: 0px;
-    width: pxTovw(55);
-    height: pxTovw(40);
-    background-color: $colorYellow;
-    border-radius: 0px 0px $border-radius $border-radius;
-    z-index: -1;
-    background-image: url(../img/down.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 60%;
-    background-size: pxTovw(30) pxTovw(20);
-    transition: all 1s;
-  }
   #Monster-introduce-btn.hide {
     display: none;
     transition: all 1s;
@@ -550,7 +543,7 @@ body {
           flex-wrap: nowrap;
         }
         > ul {
-          margin-top: 12px;
+          margin-top: pxTovw(12);
           width: 100%;
           display: flex;
           justify-content: space-between;
@@ -862,7 +855,7 @@ body {
       right: 16%;
     }
     img {
-      width: 40%;
+      width: 35%;
       height: 40%;
     }
   }
@@ -913,18 +906,19 @@ body {
   .seal {
     animation: sway 1s;
     animation-direction: alternate;
+  }
+  #EDU-01-signs {
+    display: none;
+  }
 }
-#EDU-01-signs {
-  display: none;
-}
-
 @-moz-keyframes sway {
-  from {
+  0% {
     transform: rotate(-45deg);
   }
-  to {
+  100% {
     transform: rotate(45deg);
   }
+}
 //------------------------Monster-page-------------------------------------
 .page-background {
   width: 100%;

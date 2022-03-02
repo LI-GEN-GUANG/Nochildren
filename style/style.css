@@ -227,20 +227,21 @@ body {
 }
 
 .Monster-introduce {
-  border-radius: 10px;
   position: relative;
-  width: 100%;
+  width: 24%;
   height: auto;
   top: 10px;
   left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .Monster-introduce .title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 10px;
-  width: 24%;
+  border-radius: 10px 10px 10px 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,14 +314,34 @@ body {
       align-content: center;
 }
 
+.Monster-introduce {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .Monster-introduce .item {
   display: none;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+}
+
+.Monster-introduce #Monster-introduce-btn {
+  display: block;
+  width: 2.86458vw;
+  height: 1.82292vw;
+  background-color: #ffe100;
+  border-radius: 0px 0px 10px 10px;
+  background-image: url(../img/down.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: 1.5625vw 1.04167vw;
+  z-index: 9999;
 }
 
 .Monster-introduce .item.all.open {
   width: 24%;
+  width: 100%;
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -343,7 +364,7 @@ body {
 }
 
 .Monster-introduce .item.all.open .year {
-  margin-top: 80px;
+  margin-top: 30px;
   padding-bottom: 11px;
   margin-bottom: 30px;
   border-bottom: 2px solid #ffe100;
@@ -444,27 +465,6 @@ body {
   height: 100%;
   background-color: #ffe100;
   right: -24%;
-}
-
-.Monster-introduce {
-  position: relative;
-}
-
-.Monster-introduce #Monster-introduce-btn {
-  position: absolute;
-  bottom: -78px;
-  left: 0px;
-  width: 2.86458vw;
-  height: 2.08333vw;
-  background-color: #ffe100;
-  border-radius: 0px 0px 10px 10px;
-  z-index: -1;
-  background-image: url(../img/down.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 60%;
-  background-size: 1.5625vw 1.04167vw;
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
 .Monster-introduce #Monster-introduce-btn.hide {
@@ -621,7 +621,7 @@ body {
 }
 
 .Outerframe .chart ul.chartTittles li > ul {
-  margin-top: 12px;
+  margin-top: 0.625vw;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -940,7 +940,7 @@ body {
 }
 
 .Monster-img-block .monster-img img {
-  width: 40%;
+  width: 35%;
   height: 40%;
 }
 
@@ -993,13 +993,11 @@ body {
 .monster-img .seal {
   -webkit-animation: sway 1s;
           animation: sway 1s;
-  -moz-animation-duration: 3s;
-  -moz-animation-name: slidein;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
-#EDU-01-signs {
+.monster-img #EDU-01-signs {
   display: none;
 }
 
