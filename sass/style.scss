@@ -139,10 +139,6 @@ body {
   height: calc(100% - 6%);
   border: $border-bold;
   border-radius: $border-radius;
-  // background-image: url(../img/Vector\ 1.svg);
-  // background-position: 0%;
-  // background-repeat: no-repeat;
-  // background-size: cover;
   z-index: 2;
   .nav-top {
     width: 100%;
@@ -308,7 +304,7 @@ body {
     background-color: $colorBlack;
     color: $colorYellow;
     border: 2px $colorYellow solid;
-    border-radius: $border-radius;
+    border-radius: 0 0 $border-radius $border-radius;
     .year {
       @extend %itemstyle;
       margin-top: 30px;
@@ -819,7 +815,7 @@ body {
   flex-wrap: nowrap;
   padding-top: 50px;
   position: relative;
-
+  overflow: hidden;
   .monster-img {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -876,7 +872,6 @@ body {
       top: 43%;
       left: 38%;
       display: block;
-
       background-image: url(../img/seal.svg);
       background-size: 100% 100%;
       background-repeat: no-repeat;

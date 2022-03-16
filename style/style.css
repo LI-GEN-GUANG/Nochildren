@@ -360,7 +360,7 @@ body {
   background-color: #000000;
   color: #ffe100;
   border: 2px #ffe100 solid;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 .Monster-introduce .item.all.open .year {
@@ -888,6 +888,7 @@ body {
       flex-wrap: nowrap;
   padding-top: 50px;
   position: relative;
+  overflow: hidden;
 }
 
 .Monster-img-block .monster-img {
