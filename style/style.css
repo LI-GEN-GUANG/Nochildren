@@ -916,7 +916,7 @@ body {
       flex-wrap: nowrap;
 }
 
-.Monster-img-block .monster-img h1 {
+.Monster-img-block h1 {
   display: block;
   height: auto;
   width: 13%;
@@ -935,12 +935,12 @@ body {
           transform: skew(50rad);
 }
 
-.Monster-img-block .monster-img .number {
+.Monster-img-block .number {
   top: 20%;
   right: 16%;
 }
 
-.Monster-img-block .monster-img img {
+.Monster-img-block img {
   width: 35%;
   height: 40%;
 }

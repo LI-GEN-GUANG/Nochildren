@@ -22,7 +22,7 @@ $font-family-th: "Noto Sans TC", sans-serif;
 
 * {
   cursor: crosshair;
-  // border: 1px $colorYellow solid;
+  // border: 2px $colorYellow solid;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -828,34 +828,35 @@ body {
     align-items: center;
     align-content: center;
     flex-wrap: nowrap;
-    h1 {
-      display: block;
-      height: auto;
-      width: 13%;
-      font-size: pxTovw(200);
-      position: absolute;
-      top: 10%;
-      right: 24%;
-      color: $colorYellow;
-      word-break: break-all;
-      line-height: pxTovw(200);
-      // font-style: italic;
-      letter-spacing: 50px;
-      font-weight: 800;
-      z-index: -1;
-      opacity: 0.5;
-      transform: skew(050rad);
-    }
-    .number {
-      top: 20%;
-      right: 16%;
-    }
-    img {
-      width: 35%;
-      height: 40%;
-    }
+  }
+
+  h1 {
+    display: block;
+    height: auto;
+    width: 13%;
+    font-size: pxTovw(200);
+    position: absolute;
+    top: 10%;
+    right: 24%;
+    color: $colorYellow;
+    word-break: break-all;
+    line-height: pxTovw(200);
+    letter-spacing: 50px;
+    font-weight: 800;
+    z-index: -1;
+    opacity: 0.5;
+    transform: skew(050rad);
+  }
+  .number {
+    top: 20%;
+    right: 16%;
+  }
+  img {
+    width: 35%;
+    height: 40%;
   }
 }
+
 //--------------------------------logo-Signs
 .monster-img {
   .logo-Signs {
