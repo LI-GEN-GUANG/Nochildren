@@ -32,10 +32,10 @@ $(function(){
   
   
     $(".nav-btn-group").on("click",function(){
-      $(".nav-btn-group").animate({"top":-270},100)
+      $(".nav-btn-group").animate({"top":-350},100)
   
-      $(".item.bodyheight").animate({"top":-200},0)
-      $(".item.ability").animate({"top":-200},0)
+      $(".item.bodyheight").animate({"top":-270},0)
+      $(".item.ability").animate({"top":-270},0)
       $(".item.all.open").removeClass("open")
       $("#Monster-introduce-btn.hide").removeClass("hide")
   
@@ -135,6 +135,14 @@ $(function(){
               ,function(){
                 $("#EDU-01-signs").fadeOut("")
               })
+
+
+
+
+    $('#myDivId').attr('id', 'myDivId_new');
+
+  
+
   })
   
   

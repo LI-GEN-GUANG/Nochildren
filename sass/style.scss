@@ -428,25 +428,164 @@ body {
 //------------------Monster-introduce-second-------------------
 .Monster-introduce-second {
   position: absolute;
-  width: 100%;
-  height: auto;
+  width: $leftbar-width;
   top: 500px;
   left: 10px;
   color: $colorYellow;
 
   .item.bodyheight.open {
+    margin: 0;
     display: block;
+    width: 100%;
+    height: 330px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    .item-bodyheight-left {
+      width: 50%;
+      height: 100%;
+      border-right: #ffe100 2px solid;
+      position: relative;
+      overflow: hidden;
+      .oval {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: #ffe100 2px solid;
+        border-radius: 50%;
+      }
+      .bodyheight-img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        background-position: 50% 50px;
+        background-repeat: no-repeat;
+        background-image: url(../img/icon/human.png);
+      }
+      .grid {
+        position: relative;
+        margin: 0;
+        width: 100%;
+        height: 330px;
+        border: 2px solid $colorYellow;
+        border-radius: 7px 0px 0px 7px;
+
+        .hline {
+          position: absolute;
+          margin: 0;
+          width: 1px;
+          height: 100%;
+          background-color: $colorYellow;
+          opacity: 0.6;
+        }
+        .h1 {
+          left: 16.6%;
+        }
+        .h2 {
+          left: 33.2%;
+        }
+        .h3 {
+          left: 50%;
+        }
+        .h4 {
+          left: 66.6%;
+        }
+        .h5 {
+          left: 83.2%;
+        }
+        .wline {
+          position: absolute;
+          margin: 0;
+          width: 100%;
+          height: 1px;
+          background-color: $colorYellow;
+          opacity: 0.6;
+        }
+        .w1 {
+          top: 16.6%;
+        }
+        .w2 {
+          top: 33.2%;
+        }
+        .w3 {
+          top: 50%;
+        }
+        .w4 {
+          top: 66.6%;
+        }
+        .w5 {
+          top: 83.2%;
+        }
+      }
+    }
   }
-  // .item.feature.open {
-  //   display: block;
-  // }
+  .item-bodyheight-right {
+    width: 50%;
+    padding: pxTovw(10);
+    padding-bottom: pxTovw(10);
+    padding-top: pxTovw(10);
+    // * {
+    //   border: #ffe100 2px solid;
+    // }
+
+    .height-en {
+      width: 25%;
+      display: inline-block;
+      writing-mode: vertical-lr;
+      text-orientation: mixed;
+      font-size: pxTovw(21);
+      font-family: "Courier New", Courier, monospace;
+      font-style: italic;
+    }
+    .number {
+      width: 70%;
+      display: inline-block;
+      font-size: pxTovw(80);
+      text-align: right;
+      font-style: italic;
+      letter-spacing: 1px;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+      line-height: pxTovw(50);
+      // padding-left: pxTovw(30);
+    }
+    p {
+      font-family: "Courier New", Courier, monospace;
+      font-style: italic;
+      display: inline-block;
+      font-size: pxTovw(36);
+      text-align: right;
+      font-weight: 300;
+      margin-left: 5px;
+    }
+    .height-ch {
+      width: 100%;
+      text-align: right;
+      border-top: 2px solid $colorYellow;
+      border-bottom: 2px solid $colorYellow;
+      letter-spacing: pxTovw(4);
+      line-height: pxTovw(50);
+    }
+    .height-ch-2 {
+      width: 100%;
+      text-align: right;
+      font-size: pxTovw(42);
+      letter-spacing: pxTovw(8);
+    }
+  }
   .item.ability.open {
     display: block;
   }
 
   .item {
     display: none;
-    width: 24%;
+    width: 100%;
     position: absolute;
     top: 80px;
     background-color: $colorBlack;
@@ -461,9 +600,8 @@ body {
     }
   }
   .nav-btn-group {
-    width: 100%;
     position: absolute;
-    width: $leftbar-width;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -819,6 +957,7 @@ body {
   .monster-img {
     padding-top: 40px;
     padding-bottom: 40px;
+    margin-bottom: 200px;
     position: relative;
     width: 100%;
     height: auto;
@@ -829,7 +968,6 @@ body {
     align-content: center;
     flex-wrap: nowrap;
   }
-
   h1 {
     display: block;
     height: auto;
@@ -993,5 +1131,9 @@ body {
   -ms-overflow-style: none;
 }
 .monster-page::-webkit-scrollbar {
+  display: none;
+}
+
+#EDU-002-introduce {
   display: none;
 }
