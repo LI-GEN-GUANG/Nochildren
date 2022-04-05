@@ -41,7 +41,11 @@
 
   //--------------------
   $border-radius: 10px;
+  $bodrer-radius-phone: 5px;
   $border-bold: 2px solid $colorYellow;
+
+
+
   $font-family-en: "Courier Prime", monospace;
   $font-family-th: "Noto Sans TC", sans-serif;
 
@@ -217,6 +221,7 @@
                 @media screen and (max‐width: 415px) {
                   line-height: 10px;
                   font-style: italic;
+                  
                 }
               }
             }
@@ -270,7 +275,9 @@
     left: 10px;
     display: flex;
     flex-wrap: wrap;
-    // border: #ffe100 solid 2px;
+    @media screen and(max-width:$phone){
+      width: 45%;
+    }
     .title {
       border-radius: $border-radius $border-radius $border-radius 0;
       width: 100%;
@@ -278,6 +285,9 @@
       justify-content: space-around;
       border: 1px solid $colorYellow;
       background-color: $colorYellow;
+      @media screen and(max-width:$phone){
+        border-radius: $bodrer-radius-phone $bodrer-radius-phone $bodrer-radius-phone 0;
+      }
       .monster-name {
         padding-left: 25px;
         width: 50%;
@@ -301,6 +311,9 @@
         justify-content: center;
         align-items: center;
         vertical-align: bottom;
+        @media screen and(max-width:$phone){
+          border-radius: $bodrer-radius-phone $bodrer-radius-phone $bodrer-radius-phone 0;
+        }
         h1 {
           margin: 0;
           padding-top: 5px;
@@ -308,6 +321,9 @@
           font-size: pxTovw(30);
           font-family: $font-family-en;
           color: $colorYellow;
+          @media screen and(max-width:$phone){
+            font-size: 12px;
+          }
         }
       }
     }
@@ -339,6 +355,11 @@
       background-position: 50% 40%;
       background-size: pxTovw(30) pxTovw(20);
       z-index: 9999;
+      @media screen and(max-width:$phone){
+        width: 20px;
+        height: 15px;
+        border-radius: 0 0 $bodrer-radius-phone $bodrer-radius-phone;
+      }
     }
     .item.all.open {
       width: $leftbar-width;
@@ -479,7 +500,12 @@
     top: pxTovw(500);
     left: 10px;
     color: $colorYellow;
-
+    @media screen and(max-width:$phone) {
+      top:100px;
+      left: none;
+      right: 10px;
+      
+    }
     .item.bodyheight.open {
       margin: 0;
       display: block;
@@ -958,6 +984,10 @@ display: none;
         color: $colorYellow;
         line-height: pxTovw(30);
         letter-spacing: 1px;
+        @media screen and(max-width:$phone) {
+
+          white-space:nowrap;
+        }
       }
       h1 {
         font-size: pxTovw(36);

@@ -271,6 +271,12 @@ body {
       flex-wrap: wrap;
 }
 
+@media screen and (max-width: 415px) {
+  .Monster-introduce {
+    width: 45%;
+  }
+}
+
 .Monster-introduce .title {
   border-radius: 10px 10px 10px 0;
   width: 100%;
@@ -281,6 +287,12 @@ body {
       justify-content: space-around;
   border: 1px solid #ffe100;
   background-color: #ffe100;
+}
+
+@media screen and (max-width: 415px) {
+  .Monster-introduce .title {
+    border-radius: 5px 5px 5px 0;
+  }
 }
 
 .Monster-introduce .title .monster-name {
@@ -322,6 +334,12 @@ body {
   vertical-align: bottom;
 }
 
+@media screen and (max-width: 415px) {
+  .Monster-introduce .title .monster-number {
+    border-radius: 5px 5px 5px 0;
+  }
+}
+
 .Monster-introduce .title .monster-number h1 {
   margin: 0;
   padding-top: 5px;
@@ -329,6 +347,12 @@ body {
   font-size: 1.5625vw;
   font-family: "Courier Prime", monospace;
   color: #ffe100;
+}
+
+@media screen and (max-width: 415px) {
+  .Monster-introduce .title .monster-number h1 {
+    font-size: 12px;
+  }
 }
 
 .Monster-introduce .item.all.open .year, .Monster-introduce .item.all.open .identity, .Monster-introduce .item.all.open .block-born-kind, .Monster-introduce .item.all.open .block-born-kind .born, .Monster-introduce .item.all.open .block-born-kind .kind {
@@ -369,6 +393,14 @@ body {
   background-position: 50% 40%;
   background-size: 1.5625vw 1.04167vw;
   z-index: 9999;
+}
+
+@media screen and (max-width: 415px) {
+  .Monster-introduce #Monster-introduce-btn {
+    width: 20px;
+    height: 15px;
+    border-radius: 0 0 5px 5px;
+  }
 }
 
 .Monster-introduce .item.all.open {
@@ -527,6 +559,14 @@ body {
   top: 26.04167vw;
   left: 10px;
   color: #ffe100;
+}
+
+@media screen and (max-width: 415px) {
+  .Monster-introduce-second {
+    top: 100px;
+    left: none;
+    right: 10px;
+  }
 }
 
 .Monster-introduce-second .item.bodyheight.open {
@@ -1042,6 +1082,12 @@ body {
   color: #ffe100;
   line-height: 1.5625vw;
   letter-spacing: 1px;
+}
+
+@media screen and (max-width: 415px) {
+  .Outerframe .bottom-type p {
+    white-space: nowrap;
+  }
 }
 
 .Outerframe .bottom-type h1 {
