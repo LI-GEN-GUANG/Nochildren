@@ -202,7 +202,7 @@ body {
   border-bottom: 2px solid #ffe100;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  font-size: 1.04167vw;
+  font-size: 0.9375vw;
 }
 
 @media screen and (max‐width: 415px) {
@@ -221,7 +221,7 @@ body {
   letter-spacing: 1px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  font-size: 1.04167vw;
+  font-size: 0.9375vw;
 }
 
 .Outerframe .nav-top ul.drop-down-menu > li .box::after {
@@ -233,13 +233,6 @@ body {
   border-radius: 2px;
   right: -5px;
   background-color: #ffe100;
-}
-
-@media screen and (min‐width: 415px) and (max‐width: 1024px) {
-  .Outerframe .nav-top ul.drop-down-menu {
-    width: 70%;
-    height: auto;
-  }
 }
 
 @media screen and (max‐width: 415px) {
@@ -902,7 +895,7 @@ body {
   background-color: #000000;
 }
 
-@media screen and (max-width: 449px) {
+@media screen and (max-width: 600px) {
   .Monster-select {
     display: none;
   }
@@ -912,7 +905,6 @@ body {
   width: 100%;
   height: 5%;
   background-color: #ffe100;
-  display: none;
 }
 
 .Monster-select .Monster-select-tittle p {
@@ -981,7 +973,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: scroll;
+  overflow-y: scroll;
   position: relative;
   padding: 10px;
 }
@@ -1263,29 +1255,11 @@ body {
 .page-background {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 9999;
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
-}
-
-.page-background a.page-btn {
-  display: block;
-  position: fixed;
-  width: 21px;
-  height: 25px;
-  top: 3.90625vw;
-  right: 18.22917vw;
-  background-image: url(../img/icon/xxx.svg);
-  background-position: 50% 50%;
-  background-size: 21px 25px;
-  padding: 20px;
-  background-repeat: no-repeat;
-  z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.5);
-  overflow: auto;
 }
 
 .page-background .monster-page {
@@ -1303,8 +1277,27 @@ body {
   overflow: scroll;
 }
 
+.page-background .monster-page a.page-btn {
+  display: block;
+  position: fixed;
+  width: 21px;
+  height: 25px;
+  top: 1.04167vw;
+  right: 1.04167vw;
+  background-image: url(../img/icon/xxx.svg);
+  background-position: 50% 50%;
+  background-size: 21px 25px;
+  padding: 20px;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+
 .page-background .monster-page h1 {
-  padding-left: 5%;
+  position: fixed;
+  display: block;
+  padding-left: 1.04167vw;
   font-size: 3.75vw;
   color: #ffe100;
   font-weight: 400;
@@ -1312,29 +1305,54 @@ body {
 }
 
 .page-background .monster-page .textContent {
+  margin-top: 100px;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.page-background .monster-page .textContent .block {
+  margin-top: 100px;
+  width: 90%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.page-background .monster-page .textContent img {
-  display: block;
+.page-background .monster-page .textContent .block img {
   width: 100%;
-  height: 50%;
+  height: 100%;
+  display: block;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.page-background .monster-page .textContent p {
+.page-background .monster-page .textContent .block p {
   margin-top: 20px;
+  margin-bottom: 20px;
   height: auto;
   width: 80%;
   color: #ffe100;

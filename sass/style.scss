@@ -8,6 +8,7 @@
   }
   //screen
   $phone:415px;
+  $screen-middle:1750px;
 
   //type
   $type-bg: 30px;
@@ -215,7 +216,7 @@
                 white-space: nowrap;
                 border-bottom: 2px solid $colorYellow;
                 transition: all 0.4s;
-                font-size: pxTovw(20);
+                font-size: pxTovw(18);
                 @media screen and (min‐width: 415px) and (max‐width: 1024px) {
                 }
                 @media screen and (max‐width: 415px) {
@@ -234,7 +235,7 @@
             line-height: 40px;
             letter-spacing: 1px;
             transition: all 0.4s;
-            font-size: pxTovw(20);
+            font-size: pxTovw(18);
             &::after {
               content: "";
               position: absolute;
@@ -246,10 +247,6 @@
               background-color: $colorYellow;
             }
           }
-        }
-        @media screen and (min‐width: 415px) and (max‐width: 1024px) {
-          width: 70%;
-          height: auto;
         }
         @media screen and (max‐width: 415px) {
           display: none;
@@ -793,7 +790,7 @@
     overflow: hidden;
     border: 2px solid $colorYellow;
     background-color: #000000;
-    @media screen and (max-width: 449px) {
+    @media screen and (max-width: 600px) {
       display: none;
       
     }
@@ -805,7 +802,6 @@
       width: 100%;
       height: 5%;
       background-color: $colorYellow;
-display: none;
       p {
         display: block;
         line-height: 35px;
@@ -866,7 +862,7 @@ display: none;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-        overflow: scroll;
+        overflow-y: scroll;
         position: relative;
         padding: 10px;
 
@@ -883,6 +879,7 @@ display: none;
             background-repeat: no-repeat;
           }
         }
+        
         li.Monster-btn.HOM-01 {
           a {
             background-image: url(../img/btn/2.png);
@@ -959,8 +956,6 @@ display: none;
 
   .Monster-select ul.Monsters {
     -ms-overflow-style: none;
-    // height: 100%;
-    // width: calc(100vw + 18px);
     overflow: auto;
   }
   .Monster-select ul.Monsters::-webkit-scrollbar {
@@ -973,7 +968,6 @@ display: none;
       width: auto;
       height: auto;
       position: absolute;
-      // border: 1px solid $colorYellow;
       bottom: 20px;
       right: 0;
       padding: 10px;
@@ -985,7 +979,6 @@ display: none;
         line-height: pxTovw(30);
         letter-spacing: 1px;
         @media screen and(max-width:$phone) {
-
           white-space:nowrap;
         }
       }
@@ -1013,7 +1006,6 @@ display: none;
         font-weight: 200;
         @media screen and (max-width: $phone){
           font-size:12px; 
-        
           -webkit-transform: scale(0.60);
           letter-spacing: 1px;
         }
@@ -1140,28 +1132,13 @@ display: none;
   .page-background {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 9999;
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
-    a.page-btn {
-      display: block;
-      position: fixed;
-      width: 21px;
-      height: 25px;
-      top: pxTovw(75);
-      right: pxTovw(350);
-      background-image: url(../img/icon/xxx.svg);
-      background-position: 50% 50%;
-      background-size: 21px 25px;
-      padding: 20px;
-      background-repeat: no-repeat;
-      z-index: 9999;
-      background-color: rgba(0, 0, 0, 0.5);
-      overflow: auto;
-    }
+   
+
     .monster-page {
       * {
         // border: 1px solid $colorYellow;
@@ -1177,8 +1154,28 @@ display: none;
       z-index: 9999;
       border-radius: $border-radius;
       overflow: scroll;
+
+      a.page-btn {
+        display: block;
+        position: fixed;
+        width: 21px;
+        height: 25px;
+        top: pxTovw(20);
+        right: pxTovw(20);
+        background-image: url(../img/icon/xxx.svg);
+        background-position: 50% 50%;
+        background-size: 21px 25px;
+        padding: 20px;
+        background-repeat: no-repeat;
+        z-index: 9999;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: auto;
+      }
+
       h1 {
-        padding-left: 5%;
+        position: fixed;
+        display: block;
+        padding-left: pxTovw(20);
         font-size: pxTovw(72);
         color: $colorYellow;
         font-weight: 400;
@@ -1186,26 +1183,41 @@ display: none;
       }
 
       .textContent {
+        margin-top: 100px;
         width: 100%;
-        height: 100%;
+        height: auto;
         display: flex;
-        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .final{
 
-        img {
-          display: block;
-          width: 100%;
-          height: 50%;
-          margin-top: 10px;
         }
-        p {
-          margin-top: 20px;
-          height: auto;
-          width: 80%;
-          color: $colorYellow;
-          letter-spacing: 1px;
-          line-height: 40px;
-        }
+        .block{
+          margin-top: 100px;
+          width: 90%;
+          height: auto; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+          p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: auto;
+            width: 80%;
+            color: $colorYellow;
+            letter-spacing: 1px;
+            line-height: 40px;
+          }
+        } 
       }
     }
   }

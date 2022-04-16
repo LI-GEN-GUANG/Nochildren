@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script src="/js/jq/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="/js/main.js"></script>
+    
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,7 +75,7 @@
                 <h1>EDU-001</h1>
             </div>
             <div class="monster-name">
-              <h1>魏玲芬</h1>
+              <h1 id="monster-name-Change">魏玲芬</h1>
             </div>
         </div>
         <a id="Monster-introduce-btn" class="" href="javascript:;"></a>
@@ -345,7 +347,7 @@
 
       <div id="HOM-01" class="monster-img" data-aos="fade-left">
         <h1>HOM</h1><h1 class="number">001</h1>
-       
+    
         <img src="./img/HOM-01.png" alt="">
       </div>
 
@@ -434,63 +436,95 @@
     <div id="Lesschildren" class="page-background">
       <div class="monster-page">
         <h1>#臺灣少子化</h1>
+        <a id="Lesschildren-x-btn" class="page-btn" href="javascript:;"></a>
         <div class="textContent">
-          <div class="block">
-            <img src="https://picsum.photos/id/401/600/400" alt="">
+          
+          <div class="block infor">
+            <img src="https://lh3.googleusercontent.com/W4TjSE2nBCUsFcXtOxkosMqNL5XQ2DVBHmbJSM2I3qfyZAYa76FV2M6CcXS_jgQsmj8oCFZyAc8FVoN8sX03Id31JlsVHpRQ7D7MJeutVcwAHlG_SXXi_TGcn_ZyGsMV1HpH580eFOOqM_ta_waysA1kOtrM_VqACLxsuSx98HfzWTTxZN1jVTTm0Hv4tArEIQD2WHXTv4IjP2AycnshDc1TUasn4RomM0tL2qCGyVlFlAS2x-nL_9EZhz7yOO7zn9AhnuJ4rNmsCB7cbLBSxh73UIQwPjgJthNmVLJMfFGR5DCz9h4WeshH1oLnuk5IjC7DDfS4ySoJrg7564cEVllYAakXYETb9eLv3kTDQ9_8aAfHuWNL3KeZGt2E1w64JZmNbFrrpW1JNN_PeETDkwvvJzJaBlhP1OuIbfaBotQrdGwObAjXuI95cKa5wxBu5raR59zO19EXORZ5ulFbuwQgCFJzBeABH1E_xU20BeBcEJ_jV-NJQF9lLyYZX0S3jpwsOekxrJf_0Q2HF5Phc8-eKaVUzasXQuiROn-GznHXeuIwk4hTqXDKyDJG-hNrZYBbxeDXEm4rCqqwBSPHJsuMkLyBWHHQN8EIRE2KPxyqin--Sbryjwce6OMhvFRrdq7DOYnU-SmNhAb94W_4ZaYHjdL-wKm_fyVepwM1ZclC4lV8ngPZ4-DvQRSzXji3d-EF6Kvg29IYmm2-0Ydc0yAVtjva6AMXYribdlDuvJdyyXHVVxer6NyNdIRjzH6n98M6zLTowU30qwqcD1LCiAlPX8AOLAK2jqnLa_k2njpIwzRNME_-EFlpUv750S0EGadoafALjQ=w1690-h607-no?authuser=0" alt="">
             <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
               隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
             </p>
           </div>
+
           <div class="block">
-          <img src="https://picsum.photos/id/111/600/400" alt="">
+          <img src="https://lh3.googleusercontent.com/ed069hwcYkdic5wwWkwFdgwDGn7Sf_rbQCHYPkRfH-OYCXXHPGUaW8MXl7h8aRR24stxzybWeSm68LPc_SiNxIp55rRuhl0t2p2a2A730Uut7p_cg2urh9RyM3OCXkyn8lrhTWpo-d1QADmMLScA4fOiJTdzPy1fvR6TcD1ANXryRRpCDfnV0ZZWonU3Uxnzkodf1Z4Y94-Lbua_At2jb4TXhIQUJTUEZ0puwTB_YPyFDAjT5gE3LGZvunXnXnS64liz-Lu63i7TdX7kzXKv_ENbsDjOXTMTZAYDOrkqx_Wfhzh3rkVO6-KAwRDmgdUDs-GTG_xaa2k7qaTl2FkLgHvoQBX6zZIlcEgeRPPH1qW_BTKYPCNoz4H7VvdMpcr09pUCHN34ugLTVg1Hd2BCae2g4JaVXKQd4D-rg-YCzpA4y-COezlfqMgNKj3qDDisEqkBIw-hNFAiLoNJUlc66X_35etO2TzIBUwmA3B_9tvFZ2n6J4IauvuM-n6F3ZjqbKbS6p_IzXxvkrSD706ZVAHxuesKrEyXry-PZwo7AGWp2zazfDhKKD9MUkKa9er1pJxSq96FfH1StlNv77lSlY-iXCY0bJQPZYcqc2lflX0th70KRhVGCgc3QiRlNcSR94pYDClb6QMbhjhHwMBynupKl-uB-HJ2Wg2RnSy7TQOb_cEe8XK-xtrt0T_SP-KERL_lcPnJ849APGht2PIpQ3fBnsdE60cuvptEUwU7vmZrAUvDW4EBdE3KHLr3Jo39QORmSj1CIfkFulpGCQA9eahBFuyISF2o_3AhzSPSJu1f5IhM35mZ6I02TnDL21UxHaWguPUe3w=w1690-h689-no?authuser=0" alt="4040">
           <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
             隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
           </p>
-        </div>          
+         </div>
+
+          <div class="block">
+            <img src="https://lh3.googleusercontent.com/kwl39mUOlOUnhpuJe6Lq7RksXfVBF44ng0msDp0EWdEezIQcmFqON-UR0LVa_gH0NhivL8gcDimmx8QpSU3Z2b7jQA_IbD7wW3sdUx4oOiuBKaC1G-l8rKMI2Li8QcMaYwUxyeHpXzMJ2Lz0BsF7c828GlRjldAVBToqkmB77xSkop4JFGxYCUZxJ8ZLBnlqMDTmR98U5oCd2p8sg-kVKFCGBbaWzAeRhgXme3ao6qxJA9fPZATe0SzDaOqh46GEOxTeetM6s2GGLCydq2jLXrhEjkbZ3g0k_RZKnLe1-Ia56RyG5Of8jNCOa9qWWhnNZwBt-vFRkd40i0YqmjfBMwZI7nQZECjVNNH3oftrEH27rks79N9wyCNfacKcpH2fN3cFn5YHgSjujHR3tlUJ1mIr7WrsWE0p_bIlpW9qeIuTLIVVqy9PSmBdJy2ypwoG20PLF0FyILkW2KgC7Kpfq61-SuhgLk3nvpPROVAgI1aRYWCPpkOQj-_MaP4Poii9Q57yIpPTCZhT7YFCQZZcyJ14o4VED-R6JiSY-RUy4mQ4OVRxfIqbrRvBnt89_8uMR4bMCyc3DyPiA6WZYM4kLpP4qbjxVLuXtJiyep-zkD7ZhpMCsgvL6IyLSa2nu9zS0OO5RHNkPeuw5bjGyM7dK-vBTRNJ8Xi0S9lY5Ys5ypqRe5JryjqiK4GmguU0tVf8qmRBVXpxOzhaFFtRDqr3mSPqQC4Pc2-_b3ouNYQdXJvT22wCWzcLdlWHnfJcn6b9FcMbrbRFE-molFiUl6D8AO-mXNPygrvuwH4xdNCnVgPWF65_g7FI180V134Ej-qcS-mAySWLSg=w1690-h458-no?authuser=0" alt="">
+            <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
+              隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
+            </p>
+          </div>
+
+          <div class="block">
+            <img src="https://lh3.googleusercontent.com/gUJb4HLVtFLepx_wfYDx-bzNwoX869mzYtyDskarGiKtJfSFvtkfRT27TtA8cFBOGHIqzUMmu-EzZIcMvNaBQs4kNGgD_0W_abpvjBRTKhFNvTLN66KLX1ZAPWuhjqKm22SthjyzcPy3_7e8pDFMZyBm_QigyyFDL5SfhWDkZ4YNjYRSJ6I0QDthz47FouCxzRG-11JPIeMLsCuD1XKk_JIANLvlgqC8Rhc7MYyc-0KcNIvqSio486HVWKjdJF7xShwxStzu6rClQpO2w4wi94Mvu00DakA6T0PEtizDfzI6aQEV0kXDq6scu0Vj8BAolKpuL__GtpzBEbT_2XU4I3SnBjmTDBDGlt0KvC3tUGKvsZ-ydvMuzAM1bwnN2K6WxVHe85Lqt3AQillnZ80FyPTghjfmlFBbmefzOSDaOQip4A42erR0x0bZ6K-bww-XOamvUgMaPuK1bpN2tOAmROzAXpiWYe9JLuA1q_u6FEbpeELFwd7JUhN3FGjtnGINW3AVhB0FS7M68YWn86O7X4i9dY39V1qXH1_6igmCB7KUwXGV4Bp3_mqOi6xm6fS3g7qgTdQyciO82u1KHW_fu60ZAqxdAIJ_k-rdJrz5oR9BE59e3tj7csoV65wm0ffEQeAg-v81EnNh9F3rXDgkmh07N_7JUuax9IvEBaW5MAXWKhbhKF-1a7uYHQ3H_UBy8hKOWSe__hD4saxAVJyLbjkWU-gsEeLuB3aWauO2dG7jHeaiDozNpq0UMBagFdODQ-9JsiYLaXHsxPZkryY4lXCN5E9BB2bFtu37a7ZlB4tH6X9Y-vHCplw5oHcfP7gTBweYpoauWg=w1690-h557-no?authuser=0" alt="">
+            <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
+              隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
+            </p>
+          </div>
+
+          <div class="block">
+            <img src="https://lh3.googleusercontent.com/JIkgdsPeUxfml27I6yRpiCLLLtQxE9T4ON7zIEBZV_I3msD8ueH95SLgzuhUK3CZz3AJCNVdojiC0nsIg8XY8LmHm4pwYi0_6tAn-S7cqNY9DmghjmZDBQcrpTmeXONliG9BF0Fx1hJ7OGavFKCgKbUjCU9OveGwhr4yYDE_dQDyJp3li0IbP24vS7ze9cTQ-5badmQAAwxtnnrg0FUuKjuSMsBZVXss5jDTWTcqr_0nB-h9uHMGhuCOoHG4uiuFOvGp4zz_CJEKDRGMlkpfbbTHqhJkIyaLwzz56XrVShywla7AUpE22OKYreSopnJUrVsbnLQ6OphSFaR1TVFxOn9Uj1j_xZFCLOh1ixFZpwJW6E8u7Z2LbO4EuZjZxY_TOyBubxuvuUGKAhs9tX_rTLl70yV4nzz1UeJzWCS3nKXK2XZYAEZ7XH4xByHI1FXStosM8q37am48CrgqcCa_3zesQEIdaqtkaKubbXNsoyf5WeoimfvsS2AK0vgo_mTU_tdFyhGp3PX7_TYEpSlshbnA7YgEa9VgnHvQrS5FmOOb3qBMsbhYwPWxpQxtXpV8GYr0XAzk-kJzFyjMj_sNX3uXvyoXXCXu74hadAu4mCCzCaCpb8Z0TNR64NfrXPbM1YFJGL1LxDl0nvP9CYJtPqAUS-6eyER31GBUv9iZic1ljOy9J70GiBvnCj3zGlKGSSSYN0YsfRG9pRK4AvwxnV_s4Sbiu49yDODDcdRwEwRplWMiNU162RWtCtP30CLrAxbcjTeJQYvibatwAU4AS547tXvW7o9DNGa1Qg9o1Lk9YBVWrvpgZUr1qC3z3TgJ8VEZ3a0f2Q=w1690-h627-no?authuser=0" alt="">
+            <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
+              隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
+            </p>
+          </div>
+        
+          </div>
         </div>
       </div>
-      <a id="Lesschildren-x-btn" class="page-btn" href="javascript:;"></a>
+      
     </div>
     
     
     <div id="Spread" class="page-background">
       <div class="monster-page">
-        <h1>#波及人物</h1>
+        <h1>#臺灣少子化</h1>
+        <a id="Spread-x-btn" class="page-btn" href="javascript:;"></a>
         <div class="textContent">
-        <img src="https://picsum.photos/id/500/600/400" alt="">
-          <p># 受害者／加害者
-            ***各1**
-            - 男性（此指生理男＆心理男）<br>
-            －男性做為受害者，更容易被強加社會責任，金錢與能力會被放大檢視，若是不達社會或自己心中的期待的情況下，要結婚生子就會更有困難。<br>
-            －男性作為加害者，思想較容易被大男人及傳統觀念等主義束縛，對異性的不尊重，或是過度自我感覺良好等都會加劇成家的難度。<br>
-          </p>
-          <img src="https://picsum.photos/id/123/600/400" alt="">
-          <p>
-            - 女性（此指生理女＆心理女）<br>
-            －女性做為受害者，不論在職場或家庭上較容易受到歧視，其中包括同工不同酬、女應主內、該帶小孩等，不平衡的心理也容易造成生養意願降低<br>
-            －女性做為加害者，較容易放大檢視異性的財力、能力狀況，若是對方的能力不達自己的期待，更有可能乾脆不婚不嫁。<br>
-          </p>
-          <img src="https://picsum.photos/id/555/600/400" alt="">
-          <p>
-            - 年輕人<br>
-            －年輕人做為受害者，因少子化而造成的撫養比上升、經濟能力衰退、高房價及社會期待等等，貧富差距的擴大，以及鼓吹先立業後成家的觀念，種種壓力讓婚嫁生子的門檻更高，使得少子化更為加劇。
-            - 陳舊觀念的人<br>
-          </p>
-          <img src="https://picsum.photos/id/90/600/400" alt="">
-          <p>
-            －做為加害者，會把自己的觀念強加在他人身上，在婚姻中輕則造成他人不適，重則使人對婚姻關係更有疑慮，生子的意願也將更低。
-            - 國家<br>
-            －國家做為受害者，勞動人口的下降會使經濟發展衰退，面對瞬息萬變的全球化時代將更沒有應對的能力。<br>
-            －國家做為加害者，不夠精確的社會調查會使數據沒有公信力，以及不完整的育兒配套措施也使人民對育兒這件事更有疑慮。
-          </p>
-          <img src="https://picsum.photos/id/126/600/400" alt="">
+          
+          <div class="block infor">
+            <img src="https://lh3.googleusercontent.com/W4TjSE2nBCUsFcXtOxkosMqNL5XQ2DVBHmbJSM2I3qfyZAYa76FV2M6CcXS_jgQsmj8oCFZyAc8FVoN8sX03Id31JlsVHpRQ7D7MJeutVcwAHlG_SXXi_TGcn_ZyGsMV1HpH580eFOOqM_ta_waysA1kOtrM_VqACLxsuSx98HfzWTTxZN1jVTTm0Hv4tArEIQD2WHXTv4IjP2AycnshDc1TUasn4RomM0tL2qCGyVlFlAS2x-nL_9EZhz7yOO7zn9AhnuJ4rNmsCB7cbLBSxh73UIQwPjgJthNmVLJMfFGR5DCz9h4WeshH1oLnuk5IjC7DDfS4ySoJrg7564cEVllYAakXYETb9eLv3kTDQ9_8aAfHuWNL3KeZGt2E1w64JZmNbFrrpW1JNN_PeETDkwvvJzJaBlhP1OuIbfaBotQrdGwObAjXuI95cKa5wxBu5raR59zO19EXORZ5ulFbuwQgCFJzBeABH1E_xU20BeBcEJ_jV-NJQF9lLyYZX0S3jpwsOekxrJf_0Q2HF5Phc8-eKaVUzasXQuiROn-GznHXeuIwk4hTqXDKyDJG-hNrZYBbxeDXEm4rCqqwBSPHJsuMkLyBWHHQN8EIRE2KPxyqin--Sbryjwce6OMhvFRrdq7DOYnU-SmNhAb94W_4ZaYHjdL-wKm_fyVepwM1ZclC4lV8ngPZ4-DvQRSzXji3d-EF6Kvg29IYmm2-0Ydc0yAVtjva6AMXYribdlDuvJdyyXHVVxer6NyNdIRjzH6n98M6zLTowU30qwqcD1LCiAlPX8AOLAK2jqnLa_k2njpIwzRNME_-EFlpUv750S0EGadoafALjQ=w1690-h607-no?authuser=0" alt="">
+            <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
+              隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
+            </p>
+          </div>
+
+          <div class="block">
+          <img src="https://lh3.googleusercontent.com/ed069hwcYkdic5wwWkwFdgwDGn7Sf_rbQCHYPkRfH-OYCXXHPGUaW8MXl7h8aRR24stxzybWeSm68LPc_SiNxIp55rRuhl0t2p2a2A730Uut7p_cg2urh9RyM3OCXkyn8lrhTWpo-d1QADmMLScA4fOiJTdzPy1fvR6TcD1ANXryRRpCDfnV0ZZWonU3Uxnzkodf1Z4Y94-Lbua_At2jb4TXhIQUJTUEZ0puwTB_YPyFDAjT5gE3LGZvunXnXnS64liz-Lu63i7TdX7kzXKv_ENbsDjOXTMTZAYDOrkqx_Wfhzh3rkVO6-KAwRDmgdUDs-GTG_xaa2k7qaTl2FkLgHvoQBX6zZIlcEgeRPPH1qW_BTKYPCNoz4H7VvdMpcr09pUCHN34ugLTVg1Hd2BCae2g4JaVXKQd4D-rg-YCzpA4y-COezlfqMgNKj3qDDisEqkBIw-hNFAiLoNJUlc66X_35etO2TzIBUwmA3B_9tvFZ2n6J4IauvuM-n6F3ZjqbKbS6p_IzXxvkrSD706ZVAHxuesKrEyXry-PZwo7AGWp2zazfDhKKD9MUkKa9er1pJxSq96FfH1StlNv77lSlY-iXCY0bJQPZYcqc2lflX0th70KRhVGCgc3QiRlNcSR94pYDClb6QMbhjhHwMBynupKl-uB-HJ2Wg2RnSy7TQOb_cEe8XK-xtrt0T_SP-KERL_lcPnJ849APGht2PIpQ3fBnsdE60cuvptEUwU7vmZrAUvDW4EBdE3KHLr3Jo39QORmSj1CIfkFulpGCQA9eahBFuyISF2o_3AhzSPSJu1f5IhM35mZ6I02TnDL21UxHaWguPUe3w=w1690-h689-no?authuser=0" alt="">
           <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
             隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
-          </p>            
+          </p>
+         </div>
+
+          <div class="block">
+            <img src="https://lh3.googleusercontent.com/kwl39mUOlOUnhpuJe6Lq7RksXfVBF44ng0msDp0EWdEezIQcmFqON-UR0LVa_gH0NhivL8gcDimmx8QpSU3Z2b7jQA_IbD7wW3sdUx4oOiuBKaC1G-l8rKMI2Li8QcMaYwUxyeHpXzMJ2Lz0BsF7c828GlRjldAVBToqkmB77xSkop4JFGxYCUZxJ8ZLBnlqMDTmR98U5oCd2p8sg-kVKFCGBbaWzAeRhgXme3ao6qxJA9fPZATe0SzDaOqh46GEOxTeetM6s2GGLCydq2jLXrhEjkbZ3g0k_RZKnLe1-Ia56RyG5Of8jNCOa9qWWhnNZwBt-vFRkd40i0YqmjfBMwZI7nQZECjVNNH3oftrEH27rks79N9wyCNfacKcpH2fN3cFn5YHgSjujHR3tlUJ1mIr7WrsWE0p_bIlpW9qeIuTLIVVqy9PSmBdJy2ypwoG20PLF0FyILkW2KgC7Kpfq61-SuhgLk3nvpPROVAgI1aRYWCPpkOQj-_MaP4Poii9Q57yIpPTCZhT7YFCQZZcyJ14o4VED-R6JiSY-RUy4mQ4OVRxfIqbrRvBnt89_8uMR4bMCyc3DyPiA6WZYM4kLpP4qbjxVLuXtJiyep-zkD7ZhpMCsgvL6IyLSa2nu9zS0OO5RHNkPeuw5bjGyM7dK-vBTRNJ8Xi0S9lY5Ys5ypqRe5JryjqiK4GmguU0tVf8qmRBVXpxOzhaFFtRDqr3mSPqQC4Pc2-_b3ouNYQdXJvT22wCWzcLdlWHnfJcn6b9FcMbrbRFE-molFiUl6D8AO-mXNPygrvuwH4xdNCnVgPWF65_g7FI180V134Ej-qcS-mAySWLSg=w1690-h458-no?authuser=0" alt="">
+            <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
+              隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
+            </p>
+          </div>
+
+          <div class="block">
+            <img src="https://lh3.googleusercontent.com/gUJb4HLVtFLepx_wfYDx-bzNwoX869mzYtyDskarGiKtJfSFvtkfRT27TtA8cFBOGHIqzUMmu-EzZIcMvNaBQs4kNGgD_0W_abpvjBRTKhFNvTLN66KLX1ZAPWuhjqKm22SthjyzcPy3_7e8pDFMZyBm_QigyyFDL5SfhWDkZ4YNjYRSJ6I0QDthz47FouCxzRG-11JPIeMLsCuD1XKk_JIANLvlgqC8Rhc7MYyc-0KcNIvqSio486HVWKjdJF7xShwxStzu6rClQpO2w4wi94Mvu00DakA6T0PEtizDfzI6aQEV0kXDq6scu0Vj8BAolKpuL__GtpzBEbT_2XU4I3SnBjmTDBDGlt0KvC3tUGKvsZ-ydvMuzAM1bwnN2K6WxVHe85Lqt3AQillnZ80FyPTghjfmlFBbmefzOSDaOQip4A42erR0x0bZ6K-bww-XOamvUgMaPuK1bpN2tOAmROzAXpiWYe9JLuA1q_u6FEbpeELFwd7JUhN3FGjtnGINW3AVhB0FS7M68YWn86O7X4i9dY39V1qXH1_6igmCB7KUwXGV4Bp3_mqOi6xm6fS3g7qgTdQyciO82u1KHW_fu60ZAqxdAIJ_k-rdJrz5oR9BE59e3tj7csoV65wm0ffEQeAg-v81EnNh9F3rXDgkmh07N_7JUuax9IvEBaW5MAXWKhbhKF-1a7uYHQ3H_UBy8hKOWSe__hD4saxAVJyLbjkWU-gsEeLuB3aWauO2dG7jHeaiDozNpq0UMBagFdODQ-9JsiYLaXHsxPZkryY4lXCN5E9BB2bFtu37a7ZlB4tH6X9Y-vHCplw5oHcfP7gTBweYpoauWg=w1690-h557-no?authuser=0" alt="">
+            <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
+              隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
+            </p>
+          </div>
+
+          <div class="block final">
+            <img src="https://lh3.googleusercontent.com/JIkgdsPeUxfml27I6yRpiCLLLtQxE9T4ON7zIEBZV_I3msD8ueH95SLgzuhUK3CZz3AJCNVdojiC0nsIg8XY8LmHm4pwYi0_6tAn-S7cqNY9DmghjmZDBQcrpTmeXONliG9BF0Fx1hJ7OGavFKCgKbUjCU9OveGwhr4yYDE_dQDyJp3li0IbP24vS7ze9cTQ-5badmQAAwxtnnrg0FUuKjuSMsBZVXss5jDTWTcqr_0nB-h9uHMGhuCOoHG4uiuFOvGp4zz_CJEKDRGMlkpfbbTHqhJkIyaLwzz56XrVShywla7AUpE22OKYreSopnJUrVsbnLQ6OphSFaR1TVFxOn9Uj1j_xZFCLOh1ixFZpwJW6E8u7Z2LbO4EuZjZxY_TOyBubxuvuUGKAhs9tX_rTLl70yV4nzz1UeJzWCS3nKXK2XZYAEZ7XH4xByHI1FXStosM8q37am48CrgqcCa_3zesQEIdaqtkaKubbXNsoyf5WeoimfvsS2AK0vgo_mTU_tdFyhGp3PX7_TYEpSlshbnA7YgEa9VgnHvQrS5FmOOb3qBMsbhYwPWxpQxtXpV8GYr0XAzk-kJzFyjMj_sNX3uXvyoXXCXu74hadAu4mCCzCaCpb8Z0TNR64NfrXPbM1YFJGL1LxDl0nvP9CYJtPqAUS-6eyER31GBUv9iZic1ljOy9J70GiBvnCj3zGlKGSSSYN0YsfRG9pRK4AvwxnV_s4Sbiu49yDODDcdRwEwRplWMiNU162RWtCtP30CLrAxbcjTeJQYvibatwAU4AS547tXvW7o9DNGa1Qg9o1Lk9YBVWrvpgZUr1qC3z3TgJ8VEZ3a0f2Q=w1690-h627-no?authuser=0" alt="">
+            <p>1945年，第二次世界大戰結束，軍人解甲返鄉，觸發了嬰兒潮。伴隨經濟發展，臺灣由農業社會轉為工業社會，大量的農村人口湧入城市，導致各都會人口激增。
+              隨著人口的流動，老人安養與幼兒托教成為社會問題。因應家庭計劃之推廣與醫療條件改善，臺灣人壽命不斷延長，人口成長已由高生育率、低死亡率轉變為低生育率、低死亡率。
+            </p>
+          </div>
+        
+          </div>
         </div>
       </div>
-      <a id="Spread-x-btn" class="page-btn" href="javascript:;"></a>
-    </div>
 
     <div class="monster-page-About"></div>
 
@@ -499,8 +533,8 @@
 
 
  
-  <script src="/js/jq/jquery-3.6.0.min.js"></script>
-  <script src="/js/jq/main.js"></script>
+  <script src="/js/jquery-3.6.0.min.js"></script>
+  
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
