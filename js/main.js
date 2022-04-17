@@ -160,3 +160,15 @@ function click_scroll() {
 }
 var element = document.getElementById("monster-name-Change");
 var chee = 777; 
+
+
+//monster-introduce
+$(function () {
+
+  var scrollVal = $("#EDU-01").scrollTop();
+  
+  if(scrollVal > 500){
+    fadeOut("#EDU-001-introduce1")
+  }
+
+})
