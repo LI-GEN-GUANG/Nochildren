@@ -877,6 +877,15 @@
             background-position: 50% 50%;
             background-size: contain;
             background-repeat: no-repeat;
+            transition: all 0.3s;
+            &:hover{
+              background-color: $colorYellow;
+              transform: scale(1.2);
+              border-radius: $bodrer-radius-phone;
+            }
+            &:active{
+              transform: scale(0.9);
+            }
           }
         }
         
@@ -1137,6 +1146,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    display: none;
    
 
     .monster-page {

@@ -991,6 +991,20 @@ body {
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.Monster-select .box-shadow > ul.Monsters li.Monster-btn a:hover {
+  background-color: #ffe100;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border-radius: 5px;
+}
+
+.Monster-select .box-shadow > ul.Monsters li.Monster-btn a:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .Monster-select .box-shadow > ul.Monsters li.Monster-btn.HOM-01 a {
@@ -1260,6 +1274,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  display: none;
 }
 
 .page-background .monster-page {
